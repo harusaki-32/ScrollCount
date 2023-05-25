@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>スクロール量を計る</title>
+        <script>
+            window.addEventListener('load', (event) => {
+                let count = 0;
+                document.getElementById('show').innerHTML = "スクロール量：" + count;
+
+                document.getElementById('area').onmousewheel = function(){
+                    count = count + 1;
+                    document.getElementById('show').innerHTML = "スクロール量：" + count;
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <h1>スクロール量を表示したい人向けのページ</h1>
+        <div id="show"></div>
+        <div id="area" style="padding: 200px; margin-bottom: 10px; border: 1px dashed #333333;">
+            <p>このエリアにマウスカーソルを置こう！</p>
+        </div>
+    </body>
+</html>
